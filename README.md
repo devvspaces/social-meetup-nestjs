@@ -1,46 +1,63 @@
-# nest-typescript-starter
+# NestJS Social Post API
 
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This api allows the consumer to perform the following actions and Is fully documented using swagger.
+
+1. Register a new user
+2. Login with JWT
+3. Create a new post
+4. Get all posts
+5. Get a single post
+6. Update a post
+7. Delete a post
+8. Like and Unlike a post
+9. Follow and Unfollow a user
+10. Delete a post media
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them.
 
-```
-Give examples
-```
+- [Node.js](https://nodejs.org/en/)
+- [NestJS](https://nestjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Prisma](https://www.prisma.io/)
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+```bash
+# Clone the repository
+git clone
 
-```
-Give the example
-```
+# Install dependencies
+npm install
 
-And repeat
+# Create a .env file and add the following variables
+# DATABASE_URL=postgresql://username:password@localhost:5432/database_name?schema=public
+# JWT_SECRET=your_secret_key
 
-```
-until finished
-```
+# Run the migrations
+npx prisma migrate dev --name init
 
-End with an example of getting some data out of the system or using it for a little demo.
+# Run the app
+npm run start:dev
+```
 
 ## Usage <a name = "usage"></a>
 
-Add notes about how to use the system.
+You can visit the swagger documentation at [http://localhost:3000/api](http://localhost:3000/api) to test the api endpoints.
+
+> Note: You can only access the swagger documentation when the app is running.`
